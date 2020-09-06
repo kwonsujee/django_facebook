@@ -11,6 +11,7 @@ from facebook.views import pages
 from facebook.views import new_feed
 from facebook.views import remove_feed, edit_feed
 from facebook.views import new_page
+from facebook.views import remove_comment
 
 
 """main URL Configuration
@@ -48,6 +49,8 @@ urlpatterns = [
     path('pages/',pages),
     path('new/',new_feed),
     path('pages/new/',new_page),
+
+    path('feed/<pk>/remove_comment',remove_comment.html),
 
 
 ]
