@@ -49,8 +49,8 @@ urlpatterns = [
     path('pages/',pages),
     path('new/',new_feed),
     path('pages/new/',new_page),
-
-    path('feed/<pk>/remove_comment',remove_comment.html),
-
+'''
+    path('feed/<pk>/remove_comment',remove_comment),
+'''
 
 ]

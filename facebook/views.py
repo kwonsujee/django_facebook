@@ -151,14 +151,15 @@ def edit_page(request,pk):
 
 
     return render(request,'edit_page.html',{'page':page})
+def remove_comment(request,pk,pk2):
 
-def remove_comment(request,pk):
-    comment = Comment.objects.get(pk=pk)
+    comment = Comment.objects.get(pk=pk2)
     if request.method == 'POST':
         if request.POST['password'] == Comment.password:
             comment.delete()
             return redirect('/feed/<pk>')
         else:
             return redirect('/fail')
+
     return render(request, 'remove_comment.html', {'comment': comment})
 
